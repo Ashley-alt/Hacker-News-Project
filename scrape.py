@@ -27,8 +27,8 @@ def sort_stories(hnlist):
 def custom_hn(links, subtext):
     hn = []
     for inx, item in enumerate(links):
-        title = links[inx].getText()
-        href = links[inx].get("href", None)
+        title = item.getText()
+        href = item.get("href", None)
         vote = subtext[inx].select('.score')
         if len(vote):
             points = int(vote[0].getText().replace('points',""))
